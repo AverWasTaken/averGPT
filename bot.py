@@ -1,6 +1,3 @@
-#apikey = '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'
-#token = 'MTA4Nzk2NTQ1OTk0MjQ3Nzg2Ng.G8h8J-._7FIN6qiSB181xE0kiTFM4WBom6g26a1OXehlw'
-
 import os
 import random
 import re
@@ -12,8 +9,8 @@ from discord.ext import commands
 
 engine = "pt-3.5-turbo"
 
-apikey = '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'
-token = 'MTA4Nzk2NTQ1OTk0MjQ3Nzg2Ng.G8h8J-._7FIN6qiSB181xE0kiTFM4WBom6g26a1OXehlw'
+apikey = 'openai-api-token-goes-here'
+token = 'bot-token-goes-here'
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="-", intents=intents, heartbeat_timeout=120)
