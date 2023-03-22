@@ -8,6 +8,7 @@
 - -gpttxt (txt file, prompt) | Example, "File.txt What is the summary of this txt file?
 
 ## Bugs? FAQ?
+
 [![forthebadge](https://forthebadge.com/images/badges/works-on-my-machine.svg)](https://forthebadge.com)
 
 ## dont expect magic from it. 
