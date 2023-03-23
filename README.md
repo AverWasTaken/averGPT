@@ -4,8 +4,7 @@
 
 
 ## Usage
-- gpt (prompt) | Example, "gpt what is the meaning of life?"
-- -gpttxt (txt file, prompt) | Example, "File.txt What is the summary of this txt file?
+- gpt (or fin) (prompt) | Example, "gpt what is the meaning of life?"
 
 ### Note, GPT 3.5 does have a token limit of 4,097 tokens for the txt file you upload. This includes the 500 token response it may choose to send. 
 
