@@ -1,6 +1,6 @@
 # Welcome Fin,
 
-## A Discord Bot Built On The GPT-3 Model From Open-AI.
+## A Discord Bot Built On The GPT-3 Model From [Open-AI](https://www.openai.com).
 
 
 ## Usage
