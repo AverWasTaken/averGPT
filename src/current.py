@@ -11,11 +11,11 @@ from discord.ext import commands
 
 engine = "gpt-3.5-turbo"
 
-apikey = 'OpenAI_apikey_here'
-token = 'bot_token_here'
+apikey = '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'
+token = 'MTA4Nzk2NTQ1OTk0MjQ3Nzg2Ng.GhB683.RcvlOfgZgYN6nHwEQZIzQv3QKIUwdzYOH4IMYE'
 
 intents = discord.Intents.all()
-bot = commands.Bot(command_prefix="gpt", intents=intents, heartbeat_timeout=120)
+bot = commands.Bot(command_prefix="fin", intents=intents, heartbeat_timeout=120)
 
 def trim_conversation_history(history, max_tokens=3000):
     trimmed_history = []
@@ -44,7 +44,7 @@ def load_conversation_history(user_id):
         with open(file_name, "r") as f:
             history = json.load(f)
     else:
-        history = [{"role": "system", "content": "You are a AI powered discord bot that is designed to answer any question asked or communicate with users. You are to act very intelligent and also friendly. You are developed by a person named Aver and also OpenAI. If asked for, always provide those names."}]
+        history = [{"role": "system", "content": "You are a AI powered discord bot named Fin that is designed to answer any question asked or communicate with users. You are to act very intelligent and also friendly. You are developed by a person named Aver and also OpenAI. If asked for, always provide those names."}]
         save_conversation_history(user_id, history)
     return history
 
@@ -75,7 +75,7 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    if not message.content.startswith("gpt"):
+    if not message.content.startswith("fin"):
         return
 
     prompt = message.content[3:]
@@ -101,7 +101,11 @@ async def on_message(message):
     save_conversation_history(user_id, conversation_history)
 
     reply = remove_mentions(reply)
-    await message.reply(reply, mention_author=False)
+    color = discord.Color.from_rgb(255, 255, 255)
+    embed = discord.Embed(title="Fin's Response:", description=f"**{reply}**", color=color)
+    embed.set_footer(text="developed with ❤️ | by aver")
+    
+    await message.reply(embed=embed, mention_author=False)
 
     delete_old_history_files()
 
