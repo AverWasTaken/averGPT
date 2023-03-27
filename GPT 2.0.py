@@ -11,7 +11,7 @@ from discord.ext import commands
 
 engine = "gpt-3.5-turbo"
 
-apikey = 'OpenAI_apikey_here
+apikey = 'OpenAI_apikey_here'
 token = 'bot_token_here'
 
 intents = discord.Intents.all()
