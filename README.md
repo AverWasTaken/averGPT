@@ -8,7 +8,7 @@ The bots prefix is "fin" followed by your request. For example,
 > fin (prompt) | Example, "fin what is the meaning of life?"
 
 
-### Note, GPT 3.5 does have a token limit of 4,097 tokens for the txt file you upload. This includes the 500 token response it may choose to send. 
+### Note, GPT 3.5 does have a token limit of 4,097 tokens for the questions you ask. This includes the 500 token response it may choose to send. 
 
 ## Dont understand [tokens?](https://platform.openai.com/tokenizer)
 
