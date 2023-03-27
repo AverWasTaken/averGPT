@@ -11,8 +11,8 @@ from discord.ext import commands
 
 engine = "gpt-3.5-turbo"
 
-apikey = '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'
-token = 'MTA4Nzk2NTQ1OTk0MjQ3Nzg2Ng.GhB683.RcvlOfgZgYN6nHwEQZIzQv3QKIUwdzYOH4IMYE'
+apikey = 'open_ai_apikey_here'
+token = 'discord_token_here'
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="fin", intents=intents, heartbeat_timeout=120)
