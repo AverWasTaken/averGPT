@@ -20,7 +20,7 @@ The bots prefix is "fin" followed by your request. For example,
 ## dont expect magic from it. 
 
 [![forthebadge](https://forthebadge.com/images/badges/0-percent-optimized.svg)](https://forthebadge.com)
-![gpt4](https://user-images.githubusercontent.com/66864263/228055155-c0dbad10-72ae-46fc-95c2-1033e6c58605.svg)
+![0%-chatgpt](https://user-images.githubusercontent.com/66864263/228057139-563cc625-3983-4ac6-969a-e5cbecdc290d.svg)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 *made with ❤️, by aver*
