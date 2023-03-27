@@ -14,7 +14,8 @@ The bots prefix is "fin" followed by your request. For example,
 
 ## Bugs? FAQ?
 
-[![forthebadge](https://forthebadge.com/images/badges/works-on-my-machine.svg)](https://forthebadge.com)
+![issue](https://user-images.githubusercontent.com/66864263/228055777-9b3cf110-9d5d-4dc5-8914-f6c02d227a3e.svg)
+
 
 ## dont expect magic from it. 
 
