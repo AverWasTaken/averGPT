@@ -18,10 +18,10 @@ The bots prefix is "fin" followed by your request. For example,
 
 ## dont expect magic from it. 
 
-[![forthebadge](https://forthebadge.com/images/badges/0-percent-optimized.svg)](https://forthebadge.com) [![forthebadge]
+[![forthebadge](https://forthebadge.com/images/badges/0-percent-optimized.svg)](https://forthebadge.com)
 
 ![gpt4](https://user-images.githubusercontent.com/66864263/228055155-c0dbad10-72ae-46fc-95c2-1033e6c58605.svg)
 
-(https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
 *made with ❤️, by aver*
