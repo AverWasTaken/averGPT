@@ -1,18 +1,17 @@
 import os
-import random
 import re
 import discord
-import aiohttp
 import openai
-import httpx
 import json
 from datetime import datetime
 from discord.ext import commands
+from dotenv import load_dotenv # pip install python-dotenv, for some reason the package isnt "dotenv"
+
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
+APIKEY = os.getenv("OPENAI_API_KEY")
 
 engine = "gpt-3.5-turbo"
-
-apikey = 'open_ai_apikey_here'
-token = 'discord_token_here'
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="fin", intents=intents, heartbeat_timeout=120)
@@ -30,8 +29,6 @@ def trim_conversation_history(history, max_tokens=3000):
         total_tokens += message_tokens
 
     return trimmed_history
-
-
 
 def save_conversation_history(user_id, history):
     file_name = f"conversation_history_{user_id}.json"
@@ -68,18 +65,12 @@ def remove_mentions(text):
 @bot.event
 async def on_ready():
     print(f'Logged in as {bot.user.name} (ID: {bot.user.id})')
-    await bot.change_presence(activity=discord.Game(name="With the GPT-3.5 API"))
+    await bot.change_presence(activity=discord.Game(name="with the GPT-3.5 API"))
+    await bot.tree.sync()
 
-@bot.event
-async def on_message(message):
-    if message.author == bot.user:
-        return
-
-    if not message.content.startswith("fin"):
-        return
-
-    prompt = message.content[3:]
-    user_id = message.author.id
+@bot.tree.command(name="fin", description="Interact with Fin, the AI assistant")
+async def fin(Interaction: discord.Interaction, prompt: str):
+    user_id = Interaction.user.id
 
     conversation_history = load_conversation_history(user_id)
     conversation_history.append({"role": "user", "content": prompt})
@@ -87,8 +78,8 @@ async def on_message(message):
     # Trim the conversation history
     conversation_history = trim_conversation_history(conversation_history)
 
-    async with message.channel.typing():
-        openai.api_key = apikey
+    async with Interaction.channel.typing():
+        openai.api_key = APIKEY
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=conversation_history,
@@ -104,10 +95,9 @@ async def on_message(message):
     color = discord.Color.from_rgb(255, 255, 255)
     embed = discord.Embed(title="Fin's Response:", description=f"**{reply}**", color=color)
     embed.set_footer(text="developed with ❤️ | by aver")
-    
-    await message.reply(embed=embed, mention_author=False)
+
+    await Interaction.response.send_message(embed=embed)
 
     delete_old_history_files()
 
-
-bot.run(token)
+bot.run(TOKEN)
