@@ -3,9 +3,8 @@
 ## A Discord Bot Built On The GPT-3 Model From [Open-AI](https://www.openai.com).
 
 
-## Usage
-The bots prefix is "fin" followed by your request. For example,
-> fin (prompt) | Example, "fin what is the meaning of life?"
+## Usage | Updated To Slash Commands!
+> Example, /fin prompt:what is the meaning of life?"
 
 
 ### Note, GPT 3.5 does have a token limit of 4,097 tokens for the questions you ask. This includes the 500 token response it may choose to send. 
